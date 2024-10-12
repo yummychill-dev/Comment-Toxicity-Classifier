@@ -31,3 +31,27 @@ This project implements a **Comment Toxicity Classifier** using **BERT**, a stat
    ```bash
    git clone https://github.com/yourusername/toxic-comment-classifier.git
    cd toxic-comment-classifier
+## 📊 Model Training
+
+1. **Load Data**: The dataset is loaded using `pandas` and a random sample is taken for training and validation.
+2. **Tokenization**: Comments are tokenized using BERT's `bert-base-uncased` tokenizer.
+3. **Model Setup**: The BERT model is loaded for sequence classification and fine-tuned on the dataset.
+4. **Training**: The model is trained using the HuggingFace `Trainer API` with an evaluation strategy for accuracy.
+5. **Evaluation**: The trained model is evaluated on the validation set for accuracy.
+
+
+## 🔄 Inference
+
+To test the model on new comments:
+
+## 🎯 Results
+
+- The model is evaluated using **accuracy** as the metric, achieving robust performance on the validation set.
+- Example result: `"I will kill you"` is classified as **toxic**.
+
+## 🔧 Future Work
+
+- **Multi-label classification**: Identifying specific types of toxicity (e.g., hate speech, threats).
+- **Larger datasets**: Fine-tuning on larger datasets for improved accuracy.
+- **Real-time integration**: Integrating the model with online platforms for real-time toxicity detection.
+
